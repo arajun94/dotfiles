@@ -3,6 +3,14 @@
 echo ".configディレクトリ以外をリンク"
 
 for file in $(find . | sed -e "/.git/d" -e "/.config/d" -e "s/^.\///g" | grep "^\.\w"); do
+    
+    #ディレクトリが既に存在する場合退避
+    for testfile in $(ls -a ${HOME} | grep "^\.\w"); do
+        if [ ${testfile} == ${file} ]; then
+            mv ${HOME}/${file} ${HOME}/${file}_old
+        fi
+    done
+
     ln -bs ${PWD}/${file} ${HOME}
 done
 
