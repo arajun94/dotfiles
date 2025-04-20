@@ -2,6 +2,6 @@
 	name = arajun
 	email = arajyn0904@gmail.com
 [core]
-	editor = nvim
+	editor = vim
 [init]
 	defaultBranch = main
