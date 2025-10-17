@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo apt install kde-plasma-desktop fcitx-mozc 
+sudo apt install kde-plasma-desktop fcitx5-mozc 
